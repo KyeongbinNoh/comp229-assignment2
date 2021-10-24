@@ -37,7 +37,7 @@ module.exports.displayServicesPage = (req, res, next) => {
 };
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('Contact', { title: 'Contact Us' , displayName:req.user ? req.user.displayName:''});
+    res.render('contact', { title: 'Contact Us' , displayName:req.user ? req.user.displayName:''});
 };
 
 module.exports.displayLoginPage = (req, res, next) => {

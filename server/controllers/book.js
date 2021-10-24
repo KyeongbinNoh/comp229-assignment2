@@ -31,16 +31,16 @@ module.exports.displayBookList = (req, res, next) => {
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('book/add', { title: 'Add Book' });
+    res.render('book/add', { title: 'Add Contact' });
 }
 
 module.exports.processAddPage = (req, res, next) => {
     let newBook = Book({
         "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "phoneNumber": req.body.phoneNumber,
+        "email": req.body.email
+        // "description": req.body.description,
+        // "price": req.body.price
     });
     Book.create(newBook, (err, Book) => {
         if (err) {
@@ -76,10 +76,9 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedBook = Book({
         "_id": id,
         "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "phoneNumber": req.body.phoneNumber,
+        "email": req.body.email
+       
     });
 
     Book.updateOne({ _id: id }, updatedBook, (err) => {
