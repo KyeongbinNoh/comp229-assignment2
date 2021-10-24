@@ -1,0 +1,24 @@
+/* custom css goes here */
+
+/*File name:app.css*/
+/*Name : Kyeongbin Noh*/
+/*StudentID: 301130132*/
+/*Date : OCT 1*/
+
+img{
+  width: 1000px;
+  height: 500px;
+  text-align: center;
+}
+
+#me{
+  width: 300px;
+  height: 300px;
+  text-align: left;
+}
+
+.project{
+  width: 250px;
+  height: 250px;
+ 
+}
